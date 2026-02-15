@@ -1,91 +1,117 @@
-# MSDS459 – Knowledge Engineering (Term Project)
-## Media and Broadcasting – Consumer Services Sector  
-### Checkpoint B (Week 6): Data and Schema for the Knowledge Graph
+# MSDS459 – Knowledge Engineering  
+## Week 6 – Checkpoint B: Data and Schema for the Knowledge Graph  
+### Media and Broadcasting – Consumer Services Sector  
 
-This repository contains the deliverables for the MSDS459 term project focused on constructing a knowledge base (knowledge graph) to support competitive intelligence and predictive modeling in the Media and Broadcasting sector. Checkpoint B documents the work completed through Week 5, including identified data sources, data collected to date, a proposed knowledge base schema, and plans for completing the knowledge base for the next assignment.
+This repository contains the deliverables for Checkpoint B (Week 6) of the MSDS459 term project. The objective of this stage is to summarize work completed through Week 5, formalize the data sources and schema design, and demonstrate partial implementation of a hybrid relational–graph knowledge base to support competitive intelligence and predictive modeling in the media and broadcasting domain.
 
 ---
 
-## Repository Structure
+## Repository Contents
 
-### `CheckpointA/`
-Checkpoint A submission materials (topic choice and initial schema definition).
+All files are located in the root directory of this repository.
 
-### `CheckpointB_Week6/`
-Checkpoint B submission materials (Week 6).
+### 1. Research Paper (PDF)
 
-Recommended contents:
-- `Week6_Paper.pdf`  
-  The formal research report (≤ 6 pages of text, double-spaced). Figures may appear in an appendix.
-- `Week6_Work_Summary.md`  
-  Narrative summary addressing: data sources, collected data, proposed schema, and plans.
-- `Data_Sources_Description.md`  
-  Narrative description of structured and unstructured sources and acquisition methods.
-- `Schema_Design_Description.md`  
-  Narrative schema description: nodes, relationships, attributes, and mapping of data into the graph.
-- `Database_Implementation.md`  
-  Narrative description of how PostgreSQL and Memgraph are used (tables/JSON/graph).
-- `Knowledge_Graph_Construction_Approach.md`  
-  Explanation of the knowledge base construction approach (Nickel et al., 2015).
-- `schema_v2.drawio`  
-  Draw.io editable schema diagram.
-- `schema_v2.png` and/or `schema_v2.pdf`  
-  Exported schema diagram for easy viewing.
-- `sample_json_document.json`  
-  Example crawled/ingested document record (representative JSON).
+- `Shrinidhi-Aarudra_MSDS459_Data_and_Schema.pdf`  
+
+This document contains the formal research report structured as:
+
+- Abstract  
+- Introduction  
+- Literature Review  
+- Methods  
+- Results  
+- Conclusions (including management recommendations)
+
+The paper addresses:
+- Identified structured and unstructured data sources  
+- Description of collected data  
+- Detailed schema definition  
+- Database storage strategy (PostgreSQL + Memgraph)  
+- Plans for completing the knowledge base  
+
+---
+
+### 2. Database Schema Files
+
 - `sample_sql_schema.sql`  
-  PostgreSQL DDL for core tables and JSON document storage.
+  PostgreSQL schema defining relational tables, JSONB storage, and link tables representing graph relationships.
+
 - `sample_cypher_schema.cypher`  
-  Memgraph Cypher script to create constraints/indexes and example node/relationship patterns.
+  Memgraph Cypher script defining node types, constraints, indexes, and example relationships for the property graph implementation.
+
+These files demonstrate implementation and programming components required for the assignment.
 
 ---
 
-## Term Project Goal and Management Problem
+### 3. Schema Diagrams
 
-The media and broadcasting domain evolves rapidly due to streaming adoption, regulatory shifts, and technology transitions. Decision makers must synthesize fragmented information across regulatory datasets, industry publications, and operational metadata. The management problem addressed is the lack of an integrated, queryable semantic structure for competitive intelligence.
+- `schema_v2.drawio`  
+- `schema_v2.drawio.png`  
+- `schema__Graph_v2.drawio`  
+- `schema__Graph_v2.png`  
 
-This knowledge base is designed to consolidate structured and unstructured sources into a single graph-oriented semantic layer to support:
-- competitive intelligence monitoring,
-- cross-source relationship discovery,
-- trend tracking across regions and time,
-- and predictive modeling tasks (e.g., classification or forecasting).
+These diagrams illustrate the proposed knowledge graph structure, including:
+
+Core entities:
+- Organization  
+- Document  
+- Dataset  
+- Service  
+- Technology  
+- Metric  
+- Region  
+- TimePeriod  
+- BroadcastAsset  
+
+Key relationships:
+- PUBLISHES  
+- REFERENCES  
+- DESCRIBES  
+- USES_TECHNOLOGY  
+- HAS_METRIC  
+- COVERS_REGION  
+- COVERS_PERIOD  
+- HAS_TOPIC  
+- REFERENCES_DOCUMENT  
+
+The schema represents a property graph model suitable for Memgraph while remaining compatible with relational storage in PostgreSQL.
 
 ---
 
-## Databases Used
+## Knowledge Graph Construction Approach
+
+Following Nickel et al. (2015), this project combines:
+
+1. Manual curation (structured broadcast metadata and controlled entity definitions)
+2. Information extraction from unstructured text (focused crawler outputs stored as JSON/JSON Lines)
+
+Future phases may incorporate machine learning–based inference and link prediction once graph density increases.
+
+---
+
+## Database Architecture
 
 This project uses a hybrid architecture:
 
 **PostgreSQL**
-- Structured storage for curated metadata and numeric metrics.
-- JSONB storage for crawled documents / API responses.
-- Optional geospatial support (latitude/longitude) if location attributes become central.
+- Stores structured broadcast metadata
+- Stores JSONB document data
+- Supports potential geospatial attributes (latitude/longitude)
+- Maintains relational integrity
 
 **Memgraph**
-- Property graph representation of entities and relationships.
-- Multi-hop traversal queries for competitive intelligence.
-- Graph structure suitable for downstream embedding/link prediction methods.
+- Stores semantic relationships
+- Enables multi-hop traversal queries
+- Supports competitive intelligence analysis and predictive modeling
 
 ---
 
-## Knowledge Base Construction Approach (Nickel et al., 2015)
+## Management Objective
 
-The knowledge graph construction follows two primary approaches:
-1. **Manual curation** (curated broadcast metadata and controlled entity labels).
-2. **Information extraction from text** (entity identification and triple generation from crawled documents).
-
-Later phases may incorporate **machine learning–based inference** for link prediction or completion once graph density increases.
+The knowledge base addresses the fragmentation of media and broadcasting intelligence across regulatory reports, datasets, and technical publications. By consolidating structured and unstructured information into a unified graph structure, the system enables improved discoverability, trend analysis, and data-driven decision-making for strategic planning.
 
 ---
 
-## Submission Notes
+## Repository URL for Cloning
 
-- The Checkpoint B paper is provided as a PDF file in `CheckpointB_Week6/`.
-- The GitHub repository is intended to be public and clonable by the instructor.
-- The repository URL submitted in the assignment posting should include the `.git` extension.
-
----
-
-## References
-
-Nickel, M., Murphy, K., Tresp, V., & Gabrilovich, E. (2015). A Review of Relational Machine Learning for Knowledge Graphs. *Proceedings of the IEEE*, 104(1), 11–33. (arXiv:1503.00759)
