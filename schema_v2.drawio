@@ -1,0 +1,108 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Page-1" id="6o5sB64fzokf2zRd-v1I">
+    <mxGraphModel dx="1830" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-1" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Context / Dimensions" vertex="1">
+          <mxGeometry height="706" width="640" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-2" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Domain Concepts" vertex="1">
+          <mxGeometry height="304" width="938" x="680" y="562" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-3" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Sources / Producers" vertex="1">
+          <mxGeometry height="328" width="505" x="793" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-4" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Organization&#xa;- name&#xa;- type&#xa;- website" vertex="1">
+          <mxGeometry height="78" width="260" x="921" y="197" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-5" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Document&#xa;- doc_id&#xa;- title&#xa;- published_date&#xa;- source_url" vertex="1">
+          <mxGeometry height="102" width="260" x="921" y="361" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-6" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Service&#xa;- name&#xa;- category" vertex="1">
+          <mxGeometry height="78" width="260" x="1076" y="587" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-7" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Technology&#xa;- name&#xa;- category&#xa;- standard_family" vertex="1">
+          <mxGeometry height="102" width="260" x="1050" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-8" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Dataset&#xa;- dataset_id&#xa;- title&#xa;- granularity" vertex="1">
+          <mxGeometry height="78" width="260" x="766" y="587" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-9" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Metric&#xa;- name&#xa;- unit" vertex="1">
+          <mxGeometry height="54" width="223" x="1360" y="763" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-10" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Region&#xa;- name&#xa;- iso_code&#xa;- latitude&#xa;- longitude" vertex="1">
+          <mxGeometry height="102" width="260" x="55" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-11" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="TimePeriod&#xa;- label&#xa;- start_date&#xa;- end_date" vertex="1">
+          <mxGeometry height="78" width="260" x="365" y="751" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-12" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="BroadcastAsset&#xa;- asset_id&#xa;- title&#xa;- resolution&#xa;- air_date" vertex="1">
+          <mxGeometry height="102" width="260" x="185" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-13" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-4" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-5" value="PUBLISHES">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-14" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-5" style="curved=1;startArrow=none;endArrow=block;exitX=0.9;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-6" value="DESCRIBES">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1206" y="488" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-15" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-6" style="curved=1;startArrow=none;endArrow=block;exitX=0.45;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-7" value="USES_TECHNOLOGY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="702" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-16" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-5" style="curved=1;startArrow=none;endArrow=block;exitX=0.1;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-8" value="REFERENCES">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="896" y="488" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-17" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-8" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.72;entryX=0.5;entryY=0;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-9" value="HAS_METRIC">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1472" y="702" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-18" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-8" style="curved=1;startArrow=none;endArrow=block;exitX=0.23;exitY=1;entryX=1;entryY=0.3;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-10" value="COVERS_REGION">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="759" y="702" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-19" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-8" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.13;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-11" value="COVERS_PERIOD">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="896" y="702" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-20" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-12" style="curved=1;startArrow=none;endArrow=block;exitX=0.38;exitY=1;entryX=0;entryY=0.39;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-6" value="HAS_TOPIC">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="261" y="324" />
+              <mxPoint x="261" y="562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kb0lkEQA8dqcm6lhiFwd-21" edge="1" parent="1" source="Kb0lkEQA8dqcm6lhiFwd-12" style="curved=1;startArrow=none;endArrow=block;exitX=0.62;exitY=1;entryX=0;entryY=0.34;rounded=0;" target="Kb0lkEQA8dqcm6lhiFwd-5" value="REFERENCES_DOCUMENT">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="324" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
